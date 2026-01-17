@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Completing the Square</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Progress bar at top -->
+    <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+    </div>
+
+    <div class="lesson-container">
+        <!-- Interactive Canvas -->
+        <div class="canvas-area">
+            <svg id="geometrySvg" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid meet">
+                <defs></defs>
+                <g id="shapesGroup" transform="translate(30, 20)"></g>
+            </svg>
+        </div>
+
+        <!-- Equation Display -->
+        <div class="equation" id="equationDisplay">
+            <span class="term x-squared">x²</span><span class="operator"> + </span><span class="term bx">bx</span>
+        </div>
+
+        <!-- Lesson Text -->
+        <div class="lesson-text">
+            <p id="stepDescription">We have a square with area x² and a rectangle with area bx.</p>
+        </div>
+
+        <!-- Sliders for b and c values -->
+        <div class="sliders-wrapper" id="slidersWrapper">
+            <div class="slider-container">
+                <div class="slider-label">
+                    <span class="bx">b</span>
+                    <span class="slider-value" id="bValue">8</span>
+                </div>
+                <input type="range" id="bSlider" min="2" max="10" value="8" step="1">
+            </div>
+            <div class="slider-container">
+                <div class="slider-label">
+                    <span class="c-term">c</span>
+                    <span class="slider-value" id="cValue">5</span>
+                </div>
+                <input type="range" id="cSlider" min="-10" max="10" value="5" step="1">
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="nav-buttons">
+            <button id="prevBtn" class="back-btn" disabled>
+                ←
+            </button>
+            <button id="nextBtn" class="continue-btn">
+                Continue
+            </button>
+        </div>
+    </div>
+
+    <script src="messages.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
