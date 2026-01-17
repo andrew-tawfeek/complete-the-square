@@ -1695,7 +1695,7 @@ function updateEquationWithValues() {
             equation = `<span class="term x-squared">x²</span><span class="operator"> + </span><span class="term bx">${bDisplay}x</span><span class="operator"> + </span><input type="number" id="areaInput" class="area-input" placeholder="?" min="0" step="any">${cTermGrayed}`;
             break;
         case 4:
-            equation = `<span class="term x-squared">x²</span><span class="operator"> + </span><span class="term bx">${bDisplay}x</span>${cTermGrayed}<span class="operator"> + </span><span class="term b-half-squared">${bHalfSquaredDisplay}</span><span class="equals"> = </span><span class="result">(x + ${bHalfDisplay})²</span>`;
+            equation = `<span class="term x-squared">x²</span><span class="operator"> + </span><span class="term bx">${bDisplay}x</span>${cTermGrayed}<span class="operator"> + </span><span class="term b-half-squared">${bHalfSquaredDisplay}</span><span class="equals"> = </span><span class="result">(x + ${bHalfDisplay})²</span>${cTermGrayed}`;
             break;
         case 5:
             if (isStep4To5Transition) {
